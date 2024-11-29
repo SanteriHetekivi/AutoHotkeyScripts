@@ -1,0 +1,23 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+jobs:
+  compile-and-release:
+    name: Compile and Release
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ahk2Exe
+        uses: nekocodeX/GitHub-Action-Ahk2Exe@main
+        with:
+          in: mac.ahk2
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: mac.exe

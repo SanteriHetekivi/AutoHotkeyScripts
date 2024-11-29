@@ -1,0 +1,28 @@
+; Remaps for using MacOS shortcuts on Windows.
+
+; Remap copy Ctrl+C to LeftAlt+C
+<!c:: Send "^c"
+
+; Remap paste Ctrl+V to LeftAlt+V
+<!v:: Send "^v"
+
+; Remap cut Ctrl+X to LeftAlt+X
+<!x:: Send "^x"
+
+; Remap undo Ctrl+Z to LeftAlt+Z
+<!z:: Send "^z"
+
+; Remap save Ctrl+S to LeftAlt+S
+<!s:: Send "^s"
+
+; Remap find Ctrl+F to LeftAlt+F
+<!f:: Send "^f"
+
+; Remap select all Ctrl+A to LeftAlt+A
+<!a:: Send "^a"
+
+; Run snipping tool clip with LeftAlt+LeftShift+4
+<!<+4:: Run "explorer.exe ms-screenclip:"
+
+; Remap closing window Shift+F4 to LeftAlt+LeftShift+w
+<!<+w:: Send "^{F4}"
